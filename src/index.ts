@@ -1,7 +1,9 @@
 import { Server } from 'socket.io';
 import { createServer } from 'http';
 import { Hono } from 'hono';
-import "dotenv/config"
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const app = new Hono();
 app.get('/', (c) => c.text('Bingo Game Server is running!'));
