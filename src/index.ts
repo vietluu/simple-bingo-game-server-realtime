@@ -29,11 +29,11 @@ const io = new Server(httpServer, {
 });
 const rooms: { [key: string]: Room } = {};
 
-const MIN_PLAYERS = 1;
+const MIN_PLAYERS = process.env.MIN_PLAYERS as unknown as number;
 
-const MAX_PLAYERS = 10; 
+const MAX_PLAYERS = process.env.MAX_PLAYERS as unknown as number;
 
-const MAX_WAITING_TIME = 5 * 1000; 
+const MAX_WAITING_TIME = process.env.MAX_WAITING_TIME as unknown as number;
 
 const DEFAULT_ROOM = "default";
 
